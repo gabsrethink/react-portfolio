@@ -1,16 +1,16 @@
 {
   "experiences": [
     {
-      "position": "Front-end Developer/Mobile",
-      "company": "Rethink Tecnologia",
+      "position": "Mobile Developer",
+      "company": "Rethink",
       "duration": "2024 — PRESENT",
       "description": "Contributed to the development of mobile app features for a client's financial platform using React Native, addressing specific framework-related issues and implementing instrumentation with Google Analytics and other tools.",
       "skills": ["JavaScript", "TypeScript", "React", "React Native"],
       "link": "https://www.rethink.dev/"
     },
     {
-      "position": "Front-end Developer Intern",
-      "company": "Rethink Tecnologia",
+      "position": "Front-end Developer",
+      "company": "Rethink",
       "duration": "2022 — 2023",
       "description": "Building and styling the company's website using Next.js, contributing to the company's portfolio of digital solutions. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools. Implemented features and functionalities for a client's financial web platform within the Oracle Cloud Commerce framework, enhancing user experience and optimizing the online retail environment.",
       "skills": [
