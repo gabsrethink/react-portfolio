@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hover-group .hover-item {
+  transition: opacity 0.3s ease; /* Ajuste a duração e a função de timing conforme necessário */
+}
+
+.hover-group:hover .hover-item {
+  opacity: 0.5;
+}
+
+.hover-group:hover .hover-item:hover {
+  opacity: 1;
+}
