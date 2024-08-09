@@ -17,3 +17,10 @@ html {
 .hover-group:hover .hover-item:hover {
   opacity: 1;
 }
+
+@media (max-width: 640px) {
+  .hover-group:hover .hover-item,
+  .hover-group:hover .hover-item:hover {
+    opacity: 1;
+  }
+}
