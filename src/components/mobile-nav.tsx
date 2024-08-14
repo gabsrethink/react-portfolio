@@ -1,4 +1,3 @@
-import { useClickAway } from "react-use";
 import { useRef, useState, useEffect } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -9,8 +8,7 @@ const MobileNavbar: React.FC = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [isOpen, setOpen] = useState(false);
-  const ref = useRef(null);
-  useClickAway(ref, () => setOpen(false));
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +20,11 @@ const MobileNavbar: React.FC = () => {
           currentScrollPos < 10
       );
       setPrevScrollPos(currentScrollPos);
+
+      // Fecha o modal ao rolar a página
+      if (currentScrollPos !== prevScrollPos) {
+        setOpen(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -81,6 +84,7 @@ const MobileNavbar: React.FC = () => {
                     exit={{ opacity: 0 }}
                     transition={{ type: "tween", duration: 0.3 }}
                     style={{ marginLeft: 0 }}
+                    onClick={() => setOpen(false)} // Fecha o modal ao clicar no overlay
                   ></motion.div>
                   <motion.div
                     className="fixed top-0 right-0 shadow-4xl p-5 h-full bg-purple-900 flex flex-col items-center justify-center gap-5 w-3/4"
