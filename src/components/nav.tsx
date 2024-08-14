@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
           const targetElement = document.getElementById(targetId);
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop - 70, // Ajuste de acordo com a altura da sua navbar
+              top: targetElement.offsetTop - 70,
             });
           }
         }
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`w-full py-5 bg-purple-900 fixed top-0 z-10 transition duration-300 ${
+      className={`max-sm:hidden w-full py-5 bg-purple-900 fixed top-0 z-10 transition duration-300 ${
         visible ? "opacity-100" : "opacity-0 -translate-y-full"
       }`}
     >
