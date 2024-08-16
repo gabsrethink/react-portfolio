@@ -107,6 +107,13 @@ const MobileNavbar: React.FC = () => {
                     >
                       Experiência
                     </NavLink>
+                    <NavLink
+                      href="#contact"
+                      className="nav-link"
+                      onClick={() => setOpen(false)}
+                    >
+                      Contato
+                    </NavLink>
                   </motion.div>
                 </>
               )}

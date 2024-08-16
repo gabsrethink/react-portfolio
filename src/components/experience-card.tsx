@@ -21,7 +21,7 @@ const ExperienceCard: React.FC<{ experience: ExperienceCardProps }> = ({
   return (
     <div
       onClick={handleClick}
-      className="flex justify-center flex-row items-start hover-item rounded-lg hover:bg-gray-10/60 group p-4 max-sm:flex-col max-sm:hover:bg-transparent  max-sm:px-8 cursor-pointer"
+      className="flex justify-center flex-row items-start hover-item rounded-lg hover:bg-gray-10/60 group p-4 max-sm:flex-col max-sm:hover:bg-transparent  max-sm:px-6 cursor-pointer"
     >
       <div className=" text-sm w-1/4 max-sm:w-auto max-sm:text-start">
         <p>{experience.duration}</p>

@@ -63,6 +63,9 @@ const Navbar: React.FC = () => {
             <NavLink href="#experience" className="nav-link">
               Experiência
             </NavLink>
+            <NavLink href="#contact" className="nav-link">
+              Contato
+            </NavLink>
           </div>
         </div>
       </div>

@@ -18,6 +18,19 @@ html {
   opacity: 1;
 }
 
+.no-focus-border input,
+.no-focus-border textarea {
+  outline: none;
+  border: none;
+  box-shadow: none !important;
+}
+
+.no-focus-border input:focus,
+.no-focus-border textarea:focus {
+  outline: none;
+  border: none;
+  box-shadow: none !important;
+}
 @media (max-width: 640px) {
   .hover-group:hover .hover-item,
   .hover-group:hover .hover-item:hover {

@@ -41,15 +41,15 @@
     }
   ],
   "footerLinks": [
-    { "linkedIn": "https://www.linkedin.com" },
-    { "instagram": "http://www.instagram.com" },
-    { "github": "http://github.com" }
+    { "linkedIn": "https://www.linkedin.com/in/gabriel-angelo-melo/" },
+    { "instagram": "https://www.instagram.com/gabrielmelo.a/" },
+    { "github": "https://github.com/gabsrethink" }
   ],
   "footerText": {
     "descriptionParts": [
-      "Codificado no Visual Studio Code. Construído com ",
-      ", e ",
-      ", implantado com ",
+      "Feito no Visual Studio Code. Construído com ",
+      " e ",
+      ", deploy com ",
       "."
     ],
     "links": [
