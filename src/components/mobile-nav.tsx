@@ -21,7 +21,6 @@ const MobileNavbar: React.FC = () => {
       );
       setPrevScrollPos(currentScrollPos);
 
-      // Fecha o modal ao rolar a página
       if (currentScrollPos !== prevScrollPos) {
         setOpen(false);
       }

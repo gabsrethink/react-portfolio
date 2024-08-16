@@ -17,7 +17,7 @@ export function App() {
 
       <p
         id="experience"
-        className="text-gray-50 max-w-[600px] mx-auto text-3xl font-bold pb-4 max-sm:pl-6"
+        className="text-gray-50 max-w-[600px] mx-auto text-3xl font-bold pb-4 max-sm:px-6"
       >
         {experiences.experienceTitle}
       </p>

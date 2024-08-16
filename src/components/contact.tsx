@@ -12,35 +12,34 @@ import {
 } from "@mui/material";
 import { Button } from "./button";
 
-// Tema customizado do Material UI
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#57e295", // Cor primária personalizada
+      main: "#57e295",
     },
     background: {
-      paper: "#0a192f", // Cor de fundo do diálogo
+      paper: "#0a192f",
     },
     text: {
-      primary: "#ccd6f6", // Cor do texto do diálogo
+      primary: "#ccd6f6",
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif", // Fonte personalizada
+    fontFamily: "Roboto, sans-serif",
   },
   components: {
     MuiInput: {
       styleOverrides: {
         root: {
-          color: "#ccd6f6", // Cor do texto
+          color: "#ccd6f6",
           "&:before": {
-            borderBottom: "1px solid #ccd6f6", // Cor da borda padrão
+            borderBottom: "1px solid #ccd6f6",
           },
           "&:hover:not(.Mui-disabled):before": {
-            borderBottom: "2px solid #ccd6f6", // Cor da borda ao passar o mouse
+            borderBottom: "2px solid #ccd6f6",
           },
           "&.Mui-focused:before": {
-            borderBottom: "2px solid #57e295", // Cor da borda ao focar
+            borderBottom: "2px solid #57e295",
           },
         },
       },
@@ -48,22 +47,22 @@ const theme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: "#ccd6f6", // Cor do texto do label
+          color: "#ccd6f6",
         },
       },
     },
     MuiDialog: {
       styleOverrides: {
         paper: {
-          backgroundColor: "#0a192f", // Cor de fundo do diálogo
-          color: "#ccd6f6", // Cor do texto do diálogo
+          backgroundColor: "#0a192f",
+          color: "#ccd6f6", //
         },
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          color: "#57e295", // Cor do texto do botão
+          color: "#57e295",
         },
       },
     },
@@ -81,10 +80,10 @@ const ContactForm: React.FC = () => {
       setLoading(true);
       emailjs
         .sendForm(
-          "contact_service",
-          "template_xtdwudo",
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
           form.current,
-          "UWev9pioSQ_9-2VYo"
+          import.meta.env.VITE_EMAILJS_USER_ID
         )
         .then(
           (result) => {
@@ -103,10 +102,10 @@ const ContactForm: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <h2 className="text-gray-50 max-w-[600px] mx-auto text-3xl font-bold pb-4 max-sm:pl-6">
-        Me envie uma mensagem!
+      <h2 className="text-gray-50 max-w-[600px] mx-auto text-3xl font-bold pb-4 max-sm:px-6">
+        Envie uma mensagem!
       </h2>
-      <p className="max-w-[600px] mx-auto text-xl font-bold pb-4 max-sm:pl-6">
+      <p className="max-w-[600px] mx-auto text-xl font-bold pb-4 max-sm:px-6">
         Dúvida, sugestão ou só quer bater um papo? Fique à vontade!
       </p>
       <div className="flex flex-col items-center justify-center bg-purple-900">
