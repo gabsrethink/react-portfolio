@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./button";
 import texts from "../constants/texts.json";
+import Typewriter from "./typewriter";
 
 export const Cover: React.FC = () => {
   const {
@@ -23,7 +24,7 @@ export const Cover: React.FC = () => {
       <h1 className="text-gray-50 text-7xl max-sm:text-5xl font-bold pb-2">
         {name}
       </h1>
-      <h1 className="text-7xl max-sm:text-5xl font-bold">{headline}</h1>
+      <Typewriter phrases={headline} />
       <p className="text-base max-w-[560px] pt-6 pb-10">
         {descriptionParts[0]} <a href={link}>{descriptionParts[1]}</a>
         {descriptionParts[2]}

@@ -31,12 +31,12 @@ const theme = createTheme({
     MuiInput: {
       styleOverrides: {
         root: {
-          color: "#ccd6f6",
+          color: "#8892b0",
           "&:before": {
-            borderBottom: "1px solid #ccd6f6",
+            borderBottom: "1px solid #8892b0",
           },
           "&:hover:not(.Mui-disabled):before": {
-            borderBottom: "2px solid #ccd6f6",
+            borderBottom: "2px solid #8892b0",
           },
           "&.Mui-focused:before": {
             borderBottom: "2px solid #57e295",
@@ -47,7 +47,7 @@ const theme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: "#ccd6f6",
+          color: "#8892b0",
         },
       },
     },
@@ -55,7 +55,7 @@ const theme = createTheme({
       styleOverrides: {
         paper: {
           backgroundColor: "#0a192f",
-          color: "#ccd6f6", //
+          color: "#8892b0", //
         },
       },
     },
@@ -109,8 +109,12 @@ const ContactForm: React.FC = () => {
         Dúvida, sugestão ou só quer bater um papo? Fique à vontade!
       </p>
       <div className="flex flex-col items-center justify-center bg-purple-900">
-        <form ref={form} onSubmit={sendEmail} className="w-full max-w-2xl p-8">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="w-full max-w-2xl p-6 pt-0"
+        >
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             <TextField
               label="Seu Nome"
               name="user_name"

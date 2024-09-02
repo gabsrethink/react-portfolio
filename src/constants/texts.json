@@ -61,7 +61,7 @@
   "cover": {
     "greeting": "Olá, sou",
     "name": "Gabriel Melo.",
-    "headline": "Crio conteúdo para web.",
+    "headline": ["Crio conteúdo para web.", "Crio produtos digitais."],
     "descriptionParts": [
       "Sou um desenvolvedor front-end/engenheiro de software especializado na construção de experiências digitais excepcionais. Atualmente, estou focado na criação de produtos acessíveis e focados no usuário na",
       "Rethink",
