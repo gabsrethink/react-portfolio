@@ -41,22 +41,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
-              opacity: { duration: 0.6, ease: "easeOut", delay: index * 0.2 },
-              y: { duration: 0.6, ease: "easeOut", delay: index * 0.2 },
+              duration: 0.6, // Transição ao aparecer no scroll
+              ease: "easeOut",
+              delay: index * 0.2,
             }}
             viewport={{ once: true, amount: 0.1 }}
-            whileHover={{ y: -10 }}
-            className="bg-gray-10/60 p-6 rounded-lg shadow-lg cursor-pointer max-w-[400px] w-full group transform transition-transform duration-200 ease-out hover:-translate-y-2"
+            className="bg-gray-10/60 p-6 rounded-lg shadow-lg cursor-pointer max-w-[400px] w-full border border-transparent group relative z-10"
             onClick={() =>
               project.link &&
               window.open(project.link, "_blank", "noopener,noreferrer")
             }
-            whileHover={{ y: -10 }} // Movemos o card para cima no hover
-            transition={{
-              type: "spring", // Tipo de transição spring para suavidade no hover
-              stiffness: 300, // Firmesa da animação no hover
-              damping: 15, // Amortecimento para o hover
-            }}
           >
             <div className="flex justify-between items-center">
               <FolderOpen fontSize="large" className="text-green-300" />
