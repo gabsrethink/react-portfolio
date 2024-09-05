@@ -70,5 +70,49 @@
     "buttonText": "Confira meu CV!",
     "cvLink": "https://drive.google.com/file/d/177eab-K1Ovpt6gjJK24B-9qbBkYaWHAf/view?usp=sharing",
     "link": "https://www.rethink.dev/"
-  }
+  },
+  "contactForm": {
+    "title": "Envie uma mensagem!",
+    "subtitle": "Dúvida, sugestão ou só quer bater um papo? Fique à vontade!",
+    "fields": {
+      "nameLabel": "Seu Nome",
+      "emailLabel": "Seu E-mail",
+      "messageLabel": "Sua mensagem"
+    },
+    "buttonText": "Enviar!",
+    "dialog": {
+      "title": "Obrigado!",
+      "content": "Sua mensagem foi enviada com sucesso!",
+      "closeButton": "Fechar"
+    }
+  },
+  "projectsTitle": "Projetos",
+  "projetcsButtonText": "Confira mais!",
+  "projectsLink": "https://github.com/gabsrethink",
+  "projects": [
+    {
+      "title": "React Portfolio",
+      "description": "Página de portifólio para exibir habilidades e projetos, feito em React.js e Tailwind CSS",
+      "tech": ["React.js", "Tailwind CSS"],
+      "link": "https://github.com/gabsrethink/react-portfolio"
+    },
+    {
+      "title": "Pokédex APP",
+      "description": "Aplicativo mobile de Pokédex feito em React Native e Tailwind CSS e utilizando API pública pokéAPI",
+      "tech": ["React Native", "Tailwind CSS"],
+      "link": "https://github.com/gabsrethink/pokedex"
+    },
+    {
+      "title": "Knex Authentication",
+      "description": "API de autenticação utilizando NodeJS com Typescript e Knex",
+      "tech": ["NodeJS", "TypeScript", "Knex"],
+      "link": "https://github.com/gabsrethink/nodejs-knex-authentication"
+    },
+    {
+      "title": "Register API",
+      "description": "API registro de eventos utilizando NodeJS com Typescript e Prisma",
+      "tech": ["NodeJS", "TypeScript", "Prisma"],
+      "link": "https://github.com/gabsrethink/server-node"
+    }
+  ]
 }

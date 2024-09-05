@@ -1,15 +1,17 @@
-import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
-  TextField,
-  ThemeProvider,
-  createTheme,
   Dialog,
   DialogActions,
   DialogContent,
   DialogTitle,
   Button as MuiButton,
+  TextField,
+  ThemeProvider,
+  createTheme,
 } from "@mui/material";
+import { motion } from "framer-motion";
+import React, { useRef, useState } from "react";
+import texts from "../constants/texts.json";
 import { Button } from "./button";
 
 const theme = createTheme({
@@ -102,21 +104,39 @@ const ContactForm: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <h2 className="text-gray-50 max-w-[600px] mx-auto text-3xl font-bold pb-4 max-sm:px-6">
-        Envie uma mensagem!
-      </h2>
-      <p className="max-w-[600px] mx-auto text-xl font-bold pb-4 max-sm:px-6">
-        Dúvida, sugestão ou só quer bater um papo? Fique à vontade!
-      </p>
-      <div className="flex flex-col items-center justify-center bg-purple-900">
+      <motion.h1
+        className="text-gray-50 max-w-[600px] mx-auto text-3xl font-bold pb-4 max-sm:px-6"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        {texts.contactForm.title}
+      </motion.h1>
+      <motion.h2
+        className="max-w-[600px] mx-auto text-xl font-bold pb-4 max-sm:px-6"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        {texts.contactForm.subtitle}
+      </motion.h2>
+      <motion.div
+        className="flex flex-col items-center justify-center bg-purple-900"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="w-full max-w-2xl p-6 pt-0"
+          className="w-full max-w-[600px] pt-0 max-sm:p-6 max-sm:pt-0"
         >
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             <TextField
-              label="Seu Nome"
+              label={texts.contactForm.fields.nameLabel}
               name="user_name"
               variant="standard"
               required
@@ -126,7 +146,7 @@ const ContactForm: React.FC = () => {
               className="no-focus-border"
             />
             <TextField
-              label="Seu E-mail"
+              label={texts.contactForm.fields.emailLabel}
               name="user_email"
               variant="standard"
               type="email"
@@ -137,7 +157,7 @@ const ContactForm: React.FC = () => {
             />
           </div>
           <TextField
-            label="Sua mensagem"
+            label={texts.contactForm.fields.messageLabel}
             name="message"
             variant="standard"
             multiline
@@ -149,17 +169,23 @@ const ContactForm: React.FC = () => {
             className="no-focus-border"
           />
           <div className="flex justify-center mt-8">
-            <Button text="Enviar!" type="submit" loading={loading} />
+            <Button
+              text={texts.contactForm.buttonText}
+              type="submit"
+              loading={loading}
+            />
           </div>
         </form>
-      </div>
+      </motion.div>
       <Dialog open={open} onClose={() => setOpen(false)}>
-        <DialogTitle>Obrigado!</DialogTitle>
+        <DialogTitle>{texts.contactForm.dialog.title}</DialogTitle>
         <DialogContent>
-          <p>Sua mensagem foi enviada com sucesso!</p>
+          <p>{texts.contactForm.dialog.content}</p>
         </DialogContent>
         <DialogActions>
-          <MuiButton onClick={() => setOpen(false)}>Fechar</MuiButton>
+          <MuiButton onClick={() => setOpen(false)}>
+            {texts.contactForm.dialog.closeButton}
+          </MuiButton>
         </DialogActions>
       </Dialog>
     </ThemeProvider>

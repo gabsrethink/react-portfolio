@@ -45,7 +45,7 @@ export default function Typewriter({ phrases }: Props) {
 
   return (
     <>
-      <div className="text-7xl max-sm:text-5xl font-bold max-lg:h-32">
+      <div className="text-7xl max-sm:text-5xl font-bold max-md:h-24 max-xsm:h-36">
         {text}
         <span className={state === "waiting" ? "animate-blink" : ""}>_</span>
       </div>

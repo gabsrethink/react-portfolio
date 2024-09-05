@@ -16,7 +16,7 @@ export default {
         blink: 'blink 1s step-end infinite',
       },
       screens: {
-        'xsm': '380px',
+        'xsm': '370px',
       },
       colors: {
         gray: {
