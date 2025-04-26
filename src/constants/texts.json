@@ -64,12 +64,11 @@
     "headline": ["Crio conteúdo para web.", "Crio produtos digitais."],
     "descriptionParts": [
       "Sou um desenvolvedor front-end/engenheiro de software especializado na construção de experiências digitais excepcionais. Atualmente, estou focado na criação de produtos acessíveis e focados no usuário na",
-      "Rethink",
       "."
     ],
     "buttonText": "Confira meu CV!",
     "cvLink": "https://drive.google.com/file/d/177eab-K1Ovpt6gjJK24B-9qbBkYaWHAf/view?usp=sharing",
-    "link": "https://www.rethink.dev/"
+    "links": [{ "name": "Rethink", "url": "https://www.rethink.dev/" }]
   },
   "contactForm": {
     "title": "Envie uma mensagem!",

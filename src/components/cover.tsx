@@ -12,7 +12,7 @@ export const Cover: React.FC = () => {
     descriptionParts,
     buttonText,
     cvLink,
-    link,
+    links,
   } = texts.cover;
 
   const handleButtonClick = () => {
@@ -67,8 +67,16 @@ export const Cover: React.FC = () => {
         animate="visible"
         variants={containerVariants}
       >
-        {descriptionParts[0]} <a href={link}>{descriptionParts[1]}</a>
-        {descriptionParts[2]}
+        {descriptionParts[0]}{" "}
+        <a
+          className="font-bold hover:text-green-300 transition-colors duration-300"
+          href={links[0].url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {links[0].name}
+        </a>
+        {descriptionParts[1]}
       </motion.p>
       <motion.div
         custom={4}

@@ -46,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               delay: index * 0.2,
             }}
             viewport={{ once: true, amount: 0.1 }}
-            className="bg-gray-10/60 p-6 rounded-lg shadow-lg cursor-pointer max-w-[400px] w-full border border-transparent group relative z-10"
+            className="bg-gray-10/60 p-6 rounded-lg shadow-lg cursor-pointer max-w-[400px] w-full border border-transparent group relative"
             onClick={() =>
               project.link &&
               window.open(project.link, "_blank", "noopener,noreferrer")

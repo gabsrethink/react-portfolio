@@ -42,21 +42,21 @@ const Footer: React.FC = () => {
         <p>
           {descriptionParts[0]}
           <a
-            className="font-bold hover:text-green-300"
+            className="font-bold hover:text-green-300 transition-colors duration-300"
             href={footerLinks[0].url}
           >
             {footerLinks[0].name}
           </a>
           {descriptionParts[1]}
           <a
-            className="font-bold hover:text-green-300"
+            className="font-bold hover:text-green-300 transition-colors duration-300"
             href={footerLinks[1].url}
           >
             {footerLinks[1].name}
           </a>
           {descriptionParts[2]}
           <a
-            className="font-bold hover:text-green-300"
+            className="font-bold hover:text-green-300 transition-colors duration-300"
             href={footerLinks[2].url}
           >
             {footerLinks[2].name}

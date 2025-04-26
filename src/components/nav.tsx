@@ -71,9 +71,9 @@ const Navbar: React.FC = () => {
             animate="visible"
             variants={itemVariants}
           >
-            <div className="absolute inset-x-0 h-full bg-green-300 border border-green-300 rounded-full" />
-            <div className="relative bg-purple-900 border border-green-300 transition transform duration-200 hover:-translate-x-1 hover:-translate-y-1 rounded-full text-green-300 font-medium">
-              <img src={logo} alt="Logo" className="h-auto w-11" />
+            <div className="absolute inset-x-0 h-full bg-green-400 border border-green-400 rounded-full" />
+            <div className="relative bg-green-400 border border-green-400 transition transform duration-200 hover:-translate-x-1 hover:-translate-y-1 rounded-full text-green-400 font-medium">
+              <img src={logo} alt="Logo" className="h-auto w-12" />
             </div>
           </motion.button>
           <div className="flex space-x-6">
